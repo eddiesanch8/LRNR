@@ -24,6 +24,14 @@ export function NavBar() {
       </button>
       <nav className={`nav-bar ${isOpen ? "show" : ""}`}>
         <ul className="nav-bar__ul">
+          <li className="nav-bar__item nav-bar__item--logo">
+            <Link to="/" onClick={handleLinkClick}>
+              Lrnr
+            </Link>
+          </li>
+        </ul>
+
+        <ul className="nav-bar__ul">
           <li className="nav-bar__item">
             <button onClick={toggleMenu} className={`nav-bar--close`}>
               <img className="close-hamburger" src={closeBtn} alt="close" />
@@ -32,14 +40,6 @@ export function NavBar() {
           <li className="nav-bar__item">
             <Link to="/quiz" onClick={handleLinkClick}>
               Quiz
-            </Link>
-          </li>
-        </ul>
-
-        <ul className="nav-bar__ul">
-          <li className="nav-bar__item nav-bar__item--logo">
-            <Link to="/" onClick={handleLinkClick}>
-              Home
             </Link>
           </li>
         </ul>
