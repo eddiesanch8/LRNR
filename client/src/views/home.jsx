@@ -3,6 +3,7 @@ import yrnr from "../assets/turtle.png";
 import bolt from "../assets/bolt.svg";
 import person from "../assets/person.svg";
 import payment from "../assets/payment.svg";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -13,7 +14,9 @@ export function Home() {
             <img className="cta__img" src={yrnr} />
             <h1>Lrnr</h1>
           </div>
-          <button className="cta__btn">Begin Learning</button>
+          <Link to="/quiz" className="cta__btn--anchor">
+            Begin Learning
+          </Link>
         </section>
 
         <section className="info-container">

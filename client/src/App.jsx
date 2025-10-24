@@ -3,6 +3,7 @@ import { Home } from "./views/home";
 import { Quiz } from "./views/quiz";
 import { Account } from "./views/account";
 import { NavBar } from "./components/navbar";
+import { AnswerCard } from "./views/answers";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Account" element={<Account />} />
           <Route path="/Quiz" element={<Quiz />} />
+          <Route path="/answers" element={<AnswerCard />} />
         </Routes>
       </main>
     </Router>
