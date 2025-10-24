@@ -15,10 +15,16 @@
   align-items: center;
   justify-content: space-evenly;
 }
-.cta__btn {
-  width: 50%;
+.cta__btn--anchor {
   margin: 0 auto;
+  text-decoration: none;
+  color: black;
+  border: 1px solid gray;
+  background-color: aliceblue;
+  width: 35%;
+  text-align: center;
 }
+
 .cta__img {
   width: 25%;
 }
@@ -34,4 +40,14 @@
   width: 300px;
   text-align: center;
   background-color: aquamarine;
+}
+
+@media screen and (max-width: 800px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-item {
+    margin: 1rem;
+  }
 }

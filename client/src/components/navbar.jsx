@@ -42,6 +42,11 @@ export function NavBar() {
               Quiz
             </Link>
           </li>
+          <li className="nav-bar__item">
+            <Link to="/answers" onClick={handleLinkClick}>
+              Answers
+            </Link>
+          </li>
         </ul>
 
         <ul className="nav-bar__ul">

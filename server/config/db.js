@@ -1,5 +1,14 @@
-import dotenv from "dotenv";
-// for any .env secrets
-dotenv.config();
+import mysql from "mysql2";
+import dbConfig from "./config.js";
+const connectToDatabase = async () => {
+  try {
+    const pool = mysql.createPool(dbConfig);
+    console.log("Connected to MySQL database");
+    return pool;
+  } catch (err) {
+    console.error("Database connection failed:", err.message);
+    throw err;
+  }
+};
 
-// most likely where config or where our db will live, feel free to add more files in config
+export default connectToDatabase;
