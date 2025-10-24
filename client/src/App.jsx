@@ -3,7 +3,7 @@ import { Home } from "./views/home";
 import { Quiz } from "./views/quiz";
 import { Account } from "./views/account";
 import { NavBar } from "./components/navbar";
-
+import { Footer } from "./components/footer";
 export default function App() {
   return (
     <Router>
@@ -15,6 +15,7 @@ export default function App() {
           <Route path="/Quiz" element={<Quiz />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }
