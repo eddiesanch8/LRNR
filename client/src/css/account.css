@@ -9,18 +9,15 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .intro-paragraph--text {
   color: white;
-  padding: 20px;
+  padding: 18px;
 }
-
 .intro-paragraph--text h1 {
   font-family: "Comic Sans MS", "Comic Sans";
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 0.5em;
 }
-
 .intro-paragraph--text p {
   font-size: 16px;
   margin-bottom: 1em;
@@ -28,9 +25,9 @@ body {
 
 /* Book Image */
 #plant-book {
-  width: 100px;
+  width: 150px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 /* Start Now Button */
@@ -46,7 +43,6 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
 #start-now--btn:hover {
   background-color: #e0d3bb;
 }
@@ -54,17 +50,20 @@ body {
 /* Cards Container */
 h2 {
   text-align: left;
+  font-size: 18px;
   padding: 20px;
+  margin-bottom: 1em;
 }
 .grid-cards--container {
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  margin: 10px;
-  gap: 10px;
-  padding-left: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 4em;
+  gap: 20px;
 }
-
 .card__image--container {
   background-color: rgb(244, 239, 239);
   text-align: center;
@@ -73,7 +72,6 @@ h2 {
   padding: 20px;
   height: 10em;
   width: 10em;
-  margin-bottom: 1.5em;
 }
 
 .cards-image {
@@ -96,16 +94,107 @@ h2 {
 
 /* Tablet Responsive Design */
 @media screen and (min-width: 768px) {
+  /* Top Paragraph Container */
+  .intro-paragraph--text {
+    padding: 20px;
+  }
+  .intro-paragraph--text h1 {
+    font-size: 22px;
+    margin-bottom: 0.5em;
+  }
+  .intro-paragraph--text p {
+    font-size: 18px;
+    margin-bottom: 1em;
+  }
+  /* Book Image */
+  #plant-book {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+  }
+  /* Cards Container */
+  h2 {
+    padding: 22px;
+    font-size: 20px;
+    text-align: center;
+  }
   .grid-cards--container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    display: grid;
+    place-items: center;
+    gap: 3em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 4em;
+  }
+  .card__image--container {
+    padding: 30px;
+    height: 13em;
+    width: 13em;
+  }
+  .cards-image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.7em;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-message {
+    font-size: 18px;
   }
 }
 
 /* Desktop Responsive Design */
 @media screen and (min-width: 1024px) {
+  /* Top Paragraph Container */
+  .intro-paragraph--container {
+    justify-content: center;
+  }
+  .intro-paragraph--text {
+    padding: 22px;
+  }
+  .intro-paragraph--text h1 {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+  }
+  .intro-paragraph--text p {
+    font-size: 20px;
+    margin-bottom: 1em;
+  }
+
+  /* Book Image */
+  #plant-book {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+  }
+  /* Cards Container */
+  h2 {
+    padding: 24px;
+    font-size: 22px;
+    text-align: center;
+  }
   .grid-cards--container {
-    grid-template-columns: repeat(4, 1fr);
+    gap: 4em;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    max-width: 600px;
+  }
+  .card__image--container {
+    height: 14em;
+    width: 14em;
+  }
+  .cards-image {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.8em;
+  }
+  .card-title {
+    font-size: 22px;
+  }
+  .card-message {
+    font-size: 20px;
   }
 }
