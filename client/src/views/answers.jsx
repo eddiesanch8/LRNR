@@ -90,7 +90,7 @@ export function AnswerCard() {
 
   if (loading) return <p>Loading questions...</p>;
 
-  if (currentIndex >= questions.length - 1)
+  if (currentIndex === questions.length)
     return (
       <div className="answer-container">
         <div className="result__container">
@@ -119,7 +119,7 @@ export function AnswerCard() {
       </section>
 
       <div className="question">
-        <h2 className="question__header">Question</h2>
+        <h2 className="question__header">Question:</h2>
         <p className="question__para">{currentQuestion.question_text}</p>
       </div>
 
@@ -127,11 +127,12 @@ export function AnswerCard() {
         <label className="answer__prompt" htmlFor="user-response">
           Answer
         </label>
-        <input
+        <textarea
           id="user-response"
+          type="text"
           value={userAnswer}
           onChange={(e) => setUserAnswer(e.target.value)}
-          placeholder="answer goes here"
+          placeholder="Your response..."
         />
         <button
           type="button"

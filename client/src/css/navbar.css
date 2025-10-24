@@ -50,6 +50,7 @@
 .nav-bar__item {
   list-style-type: none;
   display: flex;
+  align-items: center;
 }
 
 .button-account {

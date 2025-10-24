@@ -31,7 +31,6 @@
 
 .info-container {
   display: flex;
-  border: 2px solid red;
   justify-content: space-evenly;
 }
 
@@ -39,7 +38,15 @@
   height: 300px;
   width: 300px;
   text-align: center;
-  background-color: aquamarine;
+  margin: 0 auto;
+  box-shadow: -1px 9px 5px 2px #c4c0c073;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.info__img {
+  width: 15%;
 }
 
 @media screen and (max-width: 800px) {
