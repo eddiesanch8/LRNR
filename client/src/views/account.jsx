@@ -22,10 +22,13 @@ export function Account() {
         </div>
       </section>
 
-      <h2>Explore Features</h2>
+      <h2>
+        Explore the awesome features that inspire you to work smarter, stay
+        focused, and reach your goals every day!
+      </h2>
       <section className="grid-cards--container">
-        {data.map((d) => (
-          <div className="card__image--container">
+        {data.map((d, index) => (
+          <div className="card__image--container" key={index}>
             <div className="card__image--wrapper">
               <img src={d.icon} alt="Card Icon" className="cards-image" />
             </div>

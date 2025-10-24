@@ -16,7 +16,23 @@ export function Quiz() {
   // Handle form submission logic here
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Selected:", { topic, difficulty, questions, tone });
+    if (!topic || !difficulty || !questions || !tone) {
+      alert("Please fill in all fields before submitting");
+    } else if (
+      topic === "select" ||
+      difficulty === "select" ||
+      questions === "select" ||
+      tone === "select"
+    ) {
+      console.log("Error: Please make valid selections for all fields");
+    } else {
+      console.log("Selected answer:", {
+        topic,
+        difficulty,
+        questions,
+        tone,
+      });
+    }
   };
   return (
     <>
@@ -30,7 +46,7 @@ export function Quiz() {
 
       <section className="quiz-form-section">
         <form onSubmit={handleSubmit}>
-          <label for="quiz-form__topic">Topic</label>
+          <label htmlFor="quiz-form__topic">Topic</label>
           <select
             id="quiz-form__topic"
             name="topic"
@@ -53,7 +69,7 @@ export function Quiz() {
             </option>
           </select>
 
-          <label for="quiz-form__difficulty">Difficulty</label>
+          <label htmlFor="quiz-form__difficulty">Difficulty</label>
           <select
             id="quiz-form__difficulty"
             name="difficulty"
@@ -73,7 +89,7 @@ export function Quiz() {
             </option>
           </select>
 
-          <label for="quiz-form__questions">Number of questions</label>
+          <label htmlFor="quiz-form__questions">Number of questions</label>
           <select
             id="quiz-form__questions"
             name="questions"
@@ -93,7 +109,7 @@ export function Quiz() {
             </option>
           </select>
 
-          <label for="quiz-form__tone">Style of Tone</label>
+          <label htmlFor="quiz-form__tone">Style of Tone</label>
           <select
             id="quiz-form__tone"
             name="tone"
