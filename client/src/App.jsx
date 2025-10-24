@@ -5,6 +5,7 @@ import { Account } from "./views/account";
 import { NavBar } from "./components/navbar";
 import { AnswerCard } from "./views/answers";
 
+import { Footer } from "./components/footer";
 export default function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/answers" element={<AnswerCard />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }
