@@ -1,0 +1,111 @@
+body {
+  background-color: #f2eadf;
+}
+
+/* Top Paragraph Container */
+.intro-paragraph--container {
+  background-color: #6a854d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro-paragraph--text {
+  color: white;
+  padding: 20px;
+}
+
+.intro-paragraph--text h1 {
+  font-family: "Comic Sans MS", "Comic Sans";
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+.intro-paragraph--text p {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+/* Book Image */
+#plant-book {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Start Now Button */
+#start-now--btn a {
+  text-decoration: none;
+  color: #6a854d;
+}
+#start-now--btn {
+  background-color: #f2eadf;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#start-now--btn:hover {
+  background-color: #e0d3bb;
+}
+
+/* Cards Container */
+h2 {
+  text-align: left;
+  padding: 20px;
+}
+.grid-cards--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 10px;
+  gap: 10px;
+  padding-left: 30px;
+}
+
+.card__image--container {
+  background-color: rgb(244, 239, 239);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px;
+  padding: 20px;
+  height: 10em;
+  width: 10em;
+  margin-bottom: 1.5em;
+}
+
+.cards-image {
+  width: 50px;
+  height: 50px;
+}
+
+.card__paragraph--container {
+  align-items: center;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card-message {
+  font-size: 16px;
+}
+
+/* Tablet Responsive Design */
+@media screen and (min-width: 768px) {
+  .grid-cards--container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+
+/* Desktop Responsive Design */
+@media screen and (min-width: 1024px) {
+  .grid-cards--container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
