@@ -30,7 +30,7 @@ export function AnswerCard() {
     const fetchQuestions = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8000/api/questions?topic=${topic}&difficulty=${difficulty}&limit=${limit}`
+          `https://lrnr-production.up.railway.app/api/questions?topic=${topic}&difficulty=${difficulty}&limit=${limit}`
         );
         const data = await res.json();
         setQuestions(data);
@@ -49,7 +49,7 @@ export function AnswerCard() {
     const currentQuestion = questions[currentIndex];
 
     try {
-      const res = await fetch("http://localhost:8000/api/eval", {
+      const res = await fetch("https://lrnr-production.up.railway.app/api/eval", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
