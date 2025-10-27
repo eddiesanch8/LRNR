@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "../css/quiz.css";
 export function Quiz() {
   // State for dropdown selections
@@ -12,6 +14,8 @@ export function Quiz() {
   const handleDifficultyClick = (e) => setDifficulty(e.target.value);
   const handleQuestionsClick = (e) => setQuestions(e.target.value);
   const handleToneClick = (e) => setTone(e.target.value);
+  // eduardo added this, to use to navigate to a diff page
+  const navigate = useNavigate();
 
   // Handle form submission logic here
   const handleSubmit = (e) => {
@@ -26,11 +30,8 @@ export function Quiz() {
     ) {
       console.log("Error: Please make valid selections for all fields");
     } else {
-      console.log("Selected answer:", {
-        topic,
-        difficulty,
-        questions,
-        tone,
+      navigate("/answers", {
+        state: { topic, difficulty, limit: questions, tone },
       });
     }
   };

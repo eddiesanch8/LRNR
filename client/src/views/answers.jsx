@@ -1,12 +1,11 @@
 import "../css/answers.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 export function AnswerCard() {
-  // Hardcoded quiz settings
-  const topic = "JavaScript";
-  const difficulty = "easy";
-  const tone = "A power puff girl";
-  const limit = 5;
+  const location = useLocation();
+  const { topic, difficulty, limit, tone } = location.state || {};
 
   // new state for submit button
   const [submitting, setSubmitting] = useState(false);
@@ -42,8 +41,6 @@ export function AnswerCard() {
     };
     fetchQuestions();
   }, []);
-
-  // Hardcoded AI evaluation function
 
   const handleSubmit = async () => {
     if (!userAnswer || submitting) return;
