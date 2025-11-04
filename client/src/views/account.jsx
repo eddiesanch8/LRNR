@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../css/account.css";
 import Growth from "../assets/book.png";
+import FireIcon from "../assets/fire.png";
 
 export function Account() {
   return (
@@ -46,7 +47,7 @@ export function Account() {
 
 const data = [
   {
-    icon: "/assets/fire.png",
+    icon: FireIcon,
     title: "Streak",
     message: "Keep your streak going!",
   },
