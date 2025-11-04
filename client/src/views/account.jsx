@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import "../css/account.css";
 import Growth from "../assets/book.png";
 
+import FireIcon from "../assets/fire.png";
+import RocketIcon from "../assets/rocket.png";
+import BrainIcon from "../assets/brain.png";
+import EducationIcon from "../assets/education.png";
+
 export function Account() {
   return (
     <>
@@ -46,22 +51,22 @@ export function Account() {
 
 const data = [
   {
-    icon: "/src/assets/fire.png",
+    icon: FireIcon,
     title: "Streak",
     message: "Keep your streak going!",
   },
   {
-    icon: "./src/assets/rocket.png",
+    icon: RocketIcon,
     title: "Level Up",
     message: "Reach new heights every day!",
   },
   {
-    icon: "./src/assets/brain.png",
+    icon: BrainIcon,
     title: "Quizzes",
     message: "Engage your brain daily!",
   },
   {
-    icon: "./src/assets/education.png",
+    icon: EducationIcon,
     title: "Educational",
     message: "Learn as you play!",
   },
