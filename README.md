@@ -17,6 +17,8 @@
 | **Back-end** | Node.js + Express |
 | **Database** | MySQL|
 | **Deployment** | Railway |
+
+- Host link: https://lrnr-app.up.railway.app/
 ---
 ## :rocket: Getting Started
 ### :one: Clone the Repository
