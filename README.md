@@ -1,6 +1,7 @@
 # LRNR
 ## :blue_book: Overview
 **LRNR** (pronounced *“learner”*) is a modern full-stack learning platform designed to make studying and teaching interactive, trackable, and adaptive. It combines a clean front-end interface with a robust Node.js/Express API to manage users, content, and progress.
+Host Link: https://lrnr-app.up.railway.app/
 ---
 ## :sparkles: Features
 - :closed_lock_with_key: Secure authentication and user roles (Student / Instructor / Admin)
