@@ -46,7 +46,7 @@ export function Account() {
 
 const data = [
   {
-    icon: "../assets/fire.png",
+    icon: "./client/src/assets/fire.png",
     title: "Streak",
     message: "Keep your streak going!",
   },
