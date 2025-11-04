@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../css/account.css";
 import Growth from "../assets/book.png";
-import FireIcon from './assets/fire.png';
+import FireIcon from '../assets/fire.png';
 
 export function Account() {
   return (
